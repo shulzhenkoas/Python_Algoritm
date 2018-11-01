@@ -12,8 +12,8 @@ import random
 ATTEMPT = 10
 print('Угадайте число сгенерированное компьютером от 0 до 100 за "{}" попыток!'.format(ATTEMPT))
 x = random.randint(0, 100)
-text = '\nВы не смогли угадать число!'
-print(x)
+text = '\nВы не смогли угадать число "{}"!'.format(x)
+#print(x)
 
 for _ in range(0, ATTEMPT):
     var = int(input('Ваше число: '))
