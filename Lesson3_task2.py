@@ -7,3 +7,15 @@
 # значениями 1, 4, 5, 6 (или 0, 3, 4, 5 – если индексация начинается с нуля), т.к. именно в этих
 # позициях первого массива стоят четные числа.
 
+import random
+
+AMOUNT = 20
+
+init_mass = [random.randint(1, 100) for _ in range(AMOUNT)]
+idx_mass = []
+
+for i in range(len(init_mass)):
+    if init_mass[i] % 2 == 0:
+        idx_mass.append(i+1)
+print('Исходный массив:\n{}'.format(init_mass))
+print('\nЧетный элементы массива находятся в позициях:\n{}'.format(idx_mass))
